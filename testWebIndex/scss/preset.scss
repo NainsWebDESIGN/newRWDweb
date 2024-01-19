@@ -130,3 +130,98 @@ body {
 .label-2 {
   font-size: $fontSize-label-2;
 }
+.img-cover{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.section-subtitle{
+  position: relative;
+  color: $gold-crayola;
+  font-weight: $weight-regular;
+  text-transform: uppercase;
+  letter-spacing: $letterSpacing-2;
+  margin-block-end: 12px;
+
+  &::after{
+    content: url("../img/separator.svg");
+    display: block;
+    width: 100px;
+    margin-inline: auto;
+    margin-block-start: 5px;
+  }
+}
+.btn{
+  position: relative;
+  color: $gold-crayola;
+  font-size: $fontSize-label-2;
+  font-weight: $weight-bold;
+  text-transform: uppercase;
+  letter-spacing: $letterSpacing-5;
+  max-width: max-content;
+  border: 2px solid $gold-crayola;
+  padding: 12px 45px;
+  overflow: hidden;
+  z-index: 1;
+
+  &::before{
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200%;
+    height: 200%;
+    border-radius: $radius-circle;
+    background-color: $gold-crayola;
+    transition: $transition-2;
+    z-index: -1;
+  }
+
+  .text{
+    transition: $transition-1;
+  }
+
+  .text-2{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: max-content;
+    color: $smoky-black-1;
+  }
+
+  &:is(:hover, :focus-visible)::before {
+    bottom: -50%;
+  }
+
+  &:is(:hover, :focus-visible) .text-1{
+    transform: translateY(-40px);
+  }
+
+  &:is(:hover, :focus-visible) .text-2{
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.btn-secondary{
+
+  &::before{
+    background-color: $smoky-black-1;
+  }
+
+  .text-2{
+    color: $white;
+  }
+}
+.has-before,
+.has-after{
+  position: relative;
+  z-index: 1;
+
+  &::before,
+  &::after{
+    content: "";
+    position: absolute;
+  }
+}

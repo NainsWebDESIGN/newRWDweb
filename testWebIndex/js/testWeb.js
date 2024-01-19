@@ -36,3 +36,47 @@ window.addEventListener("scroll", () => {
     hideHeader();
   }
 });
+
+const heroSlider = document.querySelector("[data-hero-slider]"),
+  heroSliderItems = document.querySelectorAll("[data-hero-slider-item]"),
+  heroSliderPrevBtn = document.querySelector("[data-prev-btn]"),
+  heroSliderNextBtn = document.querySelector("[data-next-btn]");
+
+let currentSliderPos = 0,
+  lastActiveSliderItem = heroSliderItems[0];
+
+const updateSliderPos = () => {
+    lastActiveSliderItem.classList.remove("active");
+    heroSliderItems[currentSliderPos].classList.add("active");
+    lastActiveSliderItem = heroSliderItems[currentSliderPos];
+  },
+  sliderNext = () => {
+    console.log("11111111111");
+    currentSliderPos =
+      currentSliderPos >= heroSliderItems.length - 1 ? 0 : currentSliderPos + 1;
+    updateSliderPos();
+  },
+  sliderPrev = () => {
+    console.log("222222222");
+    currentSliderPos =
+      currentSliderPos <= 0 ? heroSliderItems.length - 1 : currentSliderPos - 1;
+    updateSliderPos();
+  };
+
+heroSliderNextBtn.addEventListener("click", sliderNext());
+heroSliderPrevBtn.addEventListener("click", sliderPrev());
+
+let autoSliderInterval = setInterval(() => sliderNext(), 7000);
+const autoSlide = () => {
+  autoSliderInterval = setInterval(() => sliderNext(), 7000);
+};
+addEventListener([heroSliderNextBtn, heroSliderPrevBtn], "mouseover", () => {
+  clearInterval(autoSliderInterval);
+});
+// addEventListener(
+//   [heroSliderNextBtn, heroSliderPrevBtn],
+//   "mouseout",
+//   autoSlide()
+// );
+
+window.addEventListener("load", autoSlide());
