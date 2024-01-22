@@ -1,0 +1,54 @@
+/*---------------------------------------------*\
+  #服務項目 SERVICE
+\*---------------------------------------------*/
+.service {
+  .section-title {
+    margin-block-end: 16px;
+  }
+  .section-text {
+    margin-block-end: 40px;
+  }
+}
+
+.service-card {
+  overflow: hidden;
+
+  .has-before {
+    padding-block: 30px;
+    margin-block-end: 26px;
+    z-index: 1;
+
+    &::before {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 140px;
+      height: 100%;
+      background-image: url("../img/img-pattern.svg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: repeat;
+      transition: $transition-2;
+      transition-delay: 0;
+      z-index: -1;
+      will-change: transform;
+    }
+  }
+
+  &:is(:hover, :focus-within) .has-before::before {
+    transform: rotateY(0.5turn) translateX(50%);
+    transition-delay: 300ms;
+  }
+
+  .card-banner {
+    transition: $transition-2;
+  }
+
+  &:is(:hover, :focus-within) .card-banner {
+    transform: scale(1.05);
+  }
+
+  .card-title {
+    margin-block-end: 12px;
+  }
+}

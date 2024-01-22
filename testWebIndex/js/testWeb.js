@@ -51,13 +51,11 @@ const updateSliderPos = () => {
     lastActiveSliderItem = heroSliderItems[currentSliderPos];
   },
   sliderNext = () => {
-    console.log("11111111111");
     currentSliderPos =
       currentSliderPos >= heroSliderItems.length - 1 ? 0 : currentSliderPos + 1;
     updateSliderPos();
   },
   sliderPrev = () => {
-    console.log("222222222");
     currentSliderPos =
       currentSliderPos <= 0 ? heroSliderItems.length - 1 : currentSliderPos - 1;
     updateSliderPos();
@@ -70,9 +68,9 @@ let autoSliderInterval = setInterval(() => sliderNext(), 7000);
 const autoSlide = () => {
   autoSliderInterval = setInterval(() => sliderNext(), 7000);
 };
-addEventListener([heroSliderNextBtn, heroSliderPrevBtn], "mouseover", () => {
-  clearInterval(autoSliderInterval);
-});
+// addEventListener([heroSliderNextBtn, heroSliderPrevBtn], "mouseover", () => {
+//   clearInterval(autoSliderInterval);
+// });
 // addEventListener(
 //   [heroSliderNextBtn, heroSliderPrevBtn],
 //   "mouseout",
@@ -80,3 +78,17 @@ addEventListener([heroSliderNextBtn, heroSliderPrevBtn], "mouseover", () => {
 // );
 
 window.addEventListener("load", autoSlide());
+
+const parallaxItems = document.querySelectorAll("[data-parallax-item]");
+let x, y;
+window.addEventListener("mousemove", (event) => {
+  x = (event.clientX / window.innerWidth) * 10 - 5;
+  y = (event.clientY / window.innerHeight) * 10 - 5;
+  x = x - x * 2;
+  y = y - y * 2;
+  for (let i = 0, len = parallaxItems.length; i < len; i++) {
+    x = x * Number(parallaxItems[i].dataset.parallaxSpeed);
+    y = y * Number(parallaxItems[i].dataset.parallaxSpeed);
+    parallaxItems[i].style.transform = `translate3d(${x}px, ${y}px, 0px)`;
+  }
+});

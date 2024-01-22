@@ -1,0 +1,65 @@
+/*---------------------------------------------*\
+  #關於我們 ABOUT
+\*---------------------------------------------*/
+.about {
+  .section-text {
+    margin-block: 15px 30px;
+  }
+
+  .btn {
+    margin-inline: auto;
+    margin-block-start: 26px;
+  }
+
+  .container {
+    display: grid;
+    gap: 120px;
+  }
+
+  .abs-img {
+    position: absolute;
+
+    &::before {
+      z-index: -1;
+    }
+  }
+
+  .abs-img-1 {
+    bottom: -120px;
+    left: 0;
+    width: 150px;
+    padding-block: 50px;
+
+    &::before {
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 140px;
+      background-image: url("../img/img-pattern.svg");
+      background-repeat: repeat;
+    }
+  }
+
+  .abs-img-2 {
+    top: -65px;
+    right: 0;
+    overflow: hidden;
+
+    &::before {
+      inset: 0;
+      background-image: url("../img/badge-2-bg.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      animation: rotate360 15s linear infinite;
+    }
+  }
+}
+.about-banner {
+  position: relative;
+  margin-block-end: 120px;
+
+  & > .w-100 {
+    padding-inline-start: 50px;
+  }
+}

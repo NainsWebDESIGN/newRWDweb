@@ -48,6 +48,10 @@ textarea {
   outline: none;
 }
 
+li {
+  list-style: none;
+}
+
 address {
   font-style: normal;
 }
@@ -86,6 +90,9 @@ body.nav-active {
   background-color: hsl(38, 61%, 73%);
 }
 
+/*---------------------------------------------*\
+  #重複使用 REUSED
+\*---------------------------------------------*/
 .display-1,
 .headline-1,
 .headline-2,
@@ -158,7 +165,8 @@ body.nav-active {
 .img-cover {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .section-subtitle {
@@ -184,6 +192,7 @@ body.nav-active {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
+  max-width: -moz-max-content;
   max-width: max-content;
   border: 2px solid hsl(38, 61%, 73%);
   padding: 12px 45px;
@@ -211,6 +220,7 @@ body.nav-active {
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
+  min-width: -moz-max-content;
   min-width: max-content;
   color: hsl(40, 12%, 5%);
 }
@@ -242,6 +252,71 @@ body.nav-active {
 .has-after::after {
   content: "";
   position: absolute;
+}
+
+.section {
+  position: relative;
+  padding-block: 70px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.bg-black-10 {
+  background-color: hsl(30, 8%, 5%);
+}
+
+.grid-list {
+  display: grid;
+  gap: 40px;
+}
+
+.hover\:shine {
+  position: relative;
+}
+.hover\:shine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-image: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.4) 100%);
+  transform: skewX(-0.08turn) translateX(-180%);
+}
+.hover\:shine:is(:hover, :focus-within)::after {
+  transform: skewX(-0.08turn) translateX(275%);
+  transition: 1000ms ease;
+}
+
+.img-holder {
+  aspect-ratio: var(--width)/var(--height);
+  overflow: hidden;
+  background-color: hsl(0, 0%, 13%);
+}
+
+.btn-text {
+  color: hsl(38, 61%, 73%);
+  padding-block-end: 4px;
+  margin-inline: auto;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  transition: 250ms ease;
+}
+.btn-text:is(:hover, :focus-visible) {
+  color: hsl(0, 0%, 100%);
+}
+
+.shape {
+  display: none;
+  position: absolute;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  z-index: -1;
+}
+
+.w-100 {
+  width: 100%;
 }
 
 /*---------------------------------------------*\
@@ -326,6 +401,7 @@ body.nav-active {
 
 .contact-number {
   color: hsl(38, 61%, 73%);
+  max-width: -moz-max-content;
   max-width: max-content;
   margin-inline: auto;
 }
@@ -339,6 +415,7 @@ body.nav-active {
 
 .hover-underline {
   position: relative;
+  max-width: -moz-max-content;
   max-width: max-content;
 }
 .hover-underline::after {
@@ -443,6 +520,7 @@ body.nav-active {
   color: hsl(38, 61%, 73%);
 }
 .navbar .logo {
+  max-width: -moz-max-content;
   max-width: max-content;
   margin-inline: auto;
   margin-block-end: 60px;
@@ -468,7 +546,6 @@ body.nav-active {
 
 .navbar-item {
   border-block-start: 1px solid hsla(0, 0%, 100%, 0.2);
-  list-style-type: none;
 }
 
 .navbar-link {
@@ -587,7 +664,9 @@ body.nav-active {
   height: 100%;
   transform: scale(1.15);
   pointer-events: none;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   z-index: -1;
 }
 .hero .section-subtitle::after {
@@ -634,6 +713,112 @@ body.nav-active {
   opacity: 0;
 }
 
+/*---------------------------------------------*\
+  #服務項目 SERVICE
+\*---------------------------------------------*/
+.service .section-title {
+  margin-block-end: 16px;
+}
+.service .section-text {
+  margin-block-end: 40px;
+}
+
+.service-card {
+  overflow: hidden;
+}
+.service-card .has-before {
+  padding-block: 30px;
+  margin-block-end: 26px;
+  z-index: 1;
+}
+.service-card .has-before::before {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 100%;
+  background-image: url("../img/img-pattern.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+  transition: 500ms ease;
+  transition-delay: 0;
+  z-index: -1;
+  will-change: transform;
+}
+.service-card:is(:hover, :focus-within) .has-before::before {
+  transform: rotateY(0.5turn) translateX(50%);
+  transition-delay: 300ms;
+}
+.service-card .card-banner {
+  transition: 500ms ease;
+}
+.service-card:is(:hover, :focus-within) .card-banner {
+  transform: scale(1.05);
+}
+.service-card .card-title {
+  margin-block-end: 12px;
+}
+
+/*---------------------------------------------*\
+  #關於我們 ABOUT
+\*---------------------------------------------*/
+.about .section-text {
+  margin-block: 15px 30px;
+}
+.about .btn {
+  margin-inline: auto;
+  margin-block-start: 26px;
+}
+.about .container {
+  display: grid;
+  gap: 120px;
+}
+.about .abs-img {
+  position: absolute;
+}
+.about .abs-img::before {
+  z-index: -1;
+}
+.about .abs-img-1 {
+  bottom: -120px;
+  left: 0;
+  width: 150px;
+  padding-block: 50px;
+}
+.about .abs-img-1::before {
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  background-image: url("../img/img-pattern.svg");
+  background-repeat: repeat;
+}
+.about .abs-img-2 {
+  top: -65px;
+  right: 0;
+  overflow: hidden;
+}
+.about .abs-img-2::before {
+  inset: 0;
+  background-image: url("../img/badge-2-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: rotate360 15s linear infinite;
+}
+
+.about-banner {
+  position: relative;
+  margin-block-end: 120px;
+}
+.about-banner > .w-100 {
+  padding-inline-start: 50px;
+}
+
+/*---------------------------------------------*\
+  #動畫 ANIMATION
+\*---------------------------------------------*/
 @keyframes rotate360 {
   0% {
     transform: rotate(0);
