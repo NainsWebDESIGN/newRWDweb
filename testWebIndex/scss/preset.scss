@@ -1,7 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
 /*---------------------------------------------*\
   #預設數值 PRESET
 \*---------------------------------------------*/
-
 *,
 *::before,
 *::after {
@@ -77,4 +77,5 @@ body {
 }
 ::-webkit-scrollbar-thumb {
   background-color: $gold-crayola;
+  border-radius: 5px;
 }
