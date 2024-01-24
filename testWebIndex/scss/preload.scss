@@ -10,6 +10,7 @@
   place-content: center;
   justify-content: center;
   transition: $transition-2;
+  display: none;
 
   & > * {
     transition: $transition-1;

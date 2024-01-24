@@ -212,3 +212,11 @@
 .w-100 {
   width: 100%;
 }
+.move-anim{
+  animation: move 5s linear infinite;
+}
+.has-bg-image{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
