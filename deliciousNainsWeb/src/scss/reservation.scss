@@ -1,0 +1,68 @@
+// | 預約 RESERVATION |
+.reservation-form {
+  margin-block-start: -270px;
+}
+.form-text {
+  margin-block-end: 40px;
+
+  .link {
+    display: inline;
+    color: $gold-crayola;
+  }
+}
+.form-right {
+  background-repeat: no-repeat;
+  background-position: top left;
+
+  .headline-1 {
+    margin-block-end: 40px;
+  }
+
+  .contact-label {
+    margin-block-end: 5px;
+  }
+  .separator {
+    margin: 20px auto;
+  }
+  .body-4 {
+    color: $quick-silver;
+    line-height: $lineHeight-3;
+
+    &:not(:last-child) {
+      margin-block-end: 25px;
+    }
+  }
+}
+.form-left {
+  .btn {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+.form-left,
+.form-right {
+  padding: 40px 20px 30px;
+}
+.input-field {
+  &[type="date"] {
+    text-transform: uppercase;
+    padding-inline-end: 10px;
+
+    &::-webkit-calendar-picker-indicator {
+      opacity: 0;
+    }
+    // &::-webkit-datetime-edit-fields-wrapper {
+    //   position: relative;
+    //   left: 20px;
+    //   bottom: 10px;
+    // }
+  }
+}
+textarea {
+  &.input-field {
+    resize: none;
+    height: 140px;
+    padding-block: 20px;
+    line-height: $lineHeight-1;
+  }
+}

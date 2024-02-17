@@ -1,0 +1,90 @@
+// | MENU |
+.menu{
+    .section-title{
+        margin-block-end: 40px;
+    }
+
+    .grid-list{
+        margin-block-end: 50px;
+    }
+
+    .btn{
+        margin-inline: auto;
+        margin-block-start: 26px;
+    }
+
+    .shape{
+        display: block;
+        width: 70%;
+    }
+
+    .shape-2{
+        top: 0;
+        left: 0;
+    }
+
+    .shape-3{
+        bottom: 0;
+        right: 0;
+    }
+}
+.menu-card{
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+
+    .card-banner{
+        flex-shrink: 0;
+        border-radius: $radius-24;
+    }
+
+    .card-title{
+        transition: $transition-1;
+
+        &:is(:hover, :focus-visible){
+            color: $gold-crayola;
+        }
+    }
+
+    .badge{
+        background-color: $gold-crayola;
+        color: $eerie-black-1;
+        font-family: $fontFamily-forum;
+        max-width: max-content;
+        line-height: $lineHeight-6;
+        text-transform: uppercase;
+        padding-inline: 10px;
+        margin-block-start: 10px;
+    }
+
+    .span{
+        color: $gold-crayola;
+        margin-block: 10px;
+    }
+
+    .card-text{
+        color: $quick-silver;
+        line-height: $lineHeight-4;
+    }
+}
+.hover\:card{
+
+    .card-banner{
+        background-color: $gold-crayola;
+
+        .img-cover{
+            transition: $transition-2;
+        }
+    }
+
+    &:is(:hover, :focus-within) .card-banner .img-cover{
+        opacity: 0.7;
+        transform: scale(1.05);
+    }
+}
+.menu-text{
+    .span{
+        display: inline-block;
+        color: $gold-crayola;
+    }
+}

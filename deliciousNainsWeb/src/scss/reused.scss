@@ -1,0 +1,270 @@
+// | 重複使用 REUSED |
+.display-1,
+.headline-1,
+.headline-2,
+.title-1,
+.title-2,
+.title-3,
+.title-4 {
+  color: $white;
+  font-family: $fontFamily-forum;
+  font-weight: $weight-regular;
+  line-height: $lineHeight-2;
+}
+.display-1 {
+  font-size: $fontSize-display-1;
+  line-height: $lineHeight-1;
+}
+.headline-1 {
+  font-size: $fontSize-headline-1;
+}
+.headline-2 {
+  font-size: $fontSize-headline-2;
+  line-height: $lineHeight-6;
+}
+.title-1 {
+  font-size: $fontSize-title-1;
+}
+.title-2 {
+  font-size: $fontSize-title-2;
+}
+.title-3 {
+  font-size: $fontSize-title-3;
+}
+.title-4 {
+  font-size: $fontSize-title-4;
+}
+.body-1 {
+  font-size: $fontSize-body-1;
+  line-height: $lineHeight-6;
+}
+.body-2 {
+  font-size: $fontSize-body-2;
+  line-height: $lineHeight-4;
+}
+.body-3 {
+  font-size: $fontSize-body-3;
+}
+.body-4 {
+  font-size: $fontSize-body-4;
+}
+.label-1 {
+  font-size: $fontSize-label-1;
+}
+.label-2 {
+  font-size: $fontSize-label-2;
+}
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.section-subtitle {
+  position: relative;
+  color: $gold-crayola;
+  font-weight: $weight-regular;
+  text-transform: uppercase;
+  letter-spacing: $letterSpacing-2;
+  margin-block-end: 12px;
+
+  &::after {
+    content: url("../img/separator.svg");
+    display: block;
+    width: 100px;
+    margin-inline: auto;
+    margin-block-start: 5px;
+  }
+}
+.btn {
+  position: relative;
+  color: $gold-crayola;
+  font-size: $fontSize-label-2;
+  font-weight: $weight-bold;
+  text-transform: uppercase;
+  letter-spacing: $letterSpacing-5;
+  max-width: max-content;
+  border: 2px solid $gold-crayola;
+  padding: 12px 45px;
+  overflow: hidden;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200%;
+    height: 200%;
+    border-radius: $radius-circle;
+    background-color: $gold-crayola;
+    transition: $transition-2;
+    z-index: -1;
+  }
+
+  .text {
+    transition: $transition-1;
+  }
+
+  .text-2 {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: max-content;
+    color: $smoky-black-1;
+  }
+
+  &:is(:hover, :focus-visible) {
+    &::before {
+      bottom: -50%;
+    }
+
+    .text-1 {
+      transform: translateY(-40px);
+    }
+
+    .text-2 {
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+.btn-secondary {
+  background-color: $gold-crayola;
+  color: $black;
+
+  &::before {
+    background-color: $smoky-black-1;
+  }
+
+  .text-2 {
+    color: $white;
+  }
+}
+.has-before,
+.has-after {
+  position: relative;
+  z-index: 1;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+}
+
+.section {
+  position: relative;
+  padding-block: $section-space;
+  overflow: hidden;
+  z-index: 1;
+}
+.bg-black-10 {
+  background-color: $smoky-black-2;
+}
+.grid-list {
+  display: grid;
+  gap: 40px;
+}
+.hover\:shine {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-image: linear-gradient(to right, transparent 0%, #fff6 100%);
+    transform: skewX(-0.08turn) translateX(-180%);
+  }
+
+  &:is(:hover, :focus-within)::after {
+    transform: skewX(-0.08turn) translateX(275%);
+    transition: $transition-3;
+  }
+}
+.img-holder {
+  aspect-ratio: var(--width) / var(--height);
+  overflow: hidden;
+  background-color: $eerie-black-4;
+}
+.btn-text {
+  color: $gold-crayola;
+  padding-block-end: 4px;
+  margin-inline: auto;
+  text-transform: uppercase;
+  letter-spacing: $letterSpacing-3;
+  font-weight: $weight-bold;
+  transition: $transition-1;
+
+  &:is(:hover, :focus-visible) {
+    color: $white;
+  }
+}
+.shape {
+  display: none;
+  position: absolute;
+  max-width: max-content;
+  z-index: -1;
+}
+.w-100 {
+  width: 100%;
+}
+.move-anim {
+  animation: move 5s linear infinite;
+}
+.has-bg-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.input-field {
+  background-color: $eerie-black-2;
+  color: $white;
+  height: 56px;
+  padding: 10px 20px;
+  border: 1px solid $white-alpha-10;
+  margin-block-end: 20px;
+  outline: none;
+  transition: border-color $transition-2;
+
+  &::placeholder {
+    color: $white;
+  }
+
+  &:focus {
+    border-color: $gold-crayola;
+  }
+}
+.icon-wrapper {
+  position: relative;
+  margin-block-end: 20px;
+
+  .input-field {
+    margin-block-end: 0;
+    // padding-block-start: 10px;
+    padding: 3px 0 0 40px;
+    appearance: none;
+    cursor: pointer;
+  }
+
+  ion-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    --ionicon-stroke-width: 50px;
+    pointer-events: none;
+
+    &:first-child {
+      left: 15px;
+    }
+
+    &:last-child {
+      right: 10px;
+    }
+  }
+}
