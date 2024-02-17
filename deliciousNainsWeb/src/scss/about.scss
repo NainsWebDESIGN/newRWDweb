@@ -35,7 +35,7 @@
       left: 50%;
       transform: translateX(-50%);
       width: 140px;
-      background-image: url("../img/img-pattern.svg");
+      background-image: url(img/img-pattern.svg);
       background-repeat: repeat;
     }
   }
@@ -47,7 +47,7 @@
 
     &::before {
       inset: 0;
-      background-image: url("../img/badge-2-bg.png");
+      background-image: url(img/badge-2-bg.png);
       background-repeat: no-repeat;
       background-size: contain;
       animation: rotate360 15s linear infinite;

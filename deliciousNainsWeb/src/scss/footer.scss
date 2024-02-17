@@ -7,7 +7,7 @@
 .footer-brand{
     position: relative;
     padding: 50px 40px;
-    background: $smoky-black-1 url("../img/footer-form-bg.png");
+    background: $smoky-black-1 url(img/footer-form-bg.png);
     background-position: center top;
     background-repeat: repeat;
 
@@ -16,7 +16,7 @@
         top: 0;
         width: 15px;
         height: 100%;
-        background-image: url("../img/footer-form-pattern.svg");
+        background-image: url(/footer-form-pattern.svg);
     }
 
     &::before{
