@@ -9,10 +9,10 @@ export class AppComponent {
   constructor() {
     const preloader = document.querySelector("[data-preaload]");
 
-    window.addEventListener("load", () => {
-      preloader.classList.add("loaded");
-      document.body.classList.add("loaded");
-    });
+    // window.addEventListener("load", () => {
+    //   preloader.classList.add("loaded");
+    //   document.body.classList.add("loaded");
+    // });
 
     const eventElement = (el, event, back) => {
       for (let i = 0, len = el.length; i < len; i++) {
@@ -58,25 +58,27 @@ export class AppComponent {
       lastActiveSliderItem.classList.remove("active");
       heroSliderItems[currentSliderPos].classList.add("active");
       lastActiveSliderItem = heroSliderItems[currentSliderPos];
-    },
-      sliderNext = () => {
-        currentSliderPos =
-          currentSliderPos >= heroSliderItems.length - 1 ? 0 : currentSliderPos + 1;
-        updateSliderPos();
-      },
-      sliderPrev = () => {
-        currentSliderPos =
-          currentSliderPos <= 0 ? heroSliderItems.length - 1 : currentSliderPos - 1;
-        updateSliderPos();
-      };
+    }
+      // ,
+      //   sliderNext = () => {
+      //     currentSliderPos =
+      //       currentSliderPos >= heroSliderItems.length - 1 ? 0 : currentSliderPos + 1;
+      //     updateSliderPos();
+      //   },
+      //   sliderPrev = () => {
+      //     currentSliderPos =
+      //       currentSliderPos <= 0 ? heroSliderItems.length - 1 : currentSliderPos - 1;
+      //     updateSliderPos();
+      //   }
+      ;
 
     // heroSliderNextBtn.addEventListener("click", sliderNext());
     // heroSliderPrevBtn.addEventListener("click", sliderPrev());
 
-    let autoSliderInterval = setInterval(() => sliderNext(), 7000);
-    const autoSlide = () => {
-      autoSliderInterval = setInterval(() => sliderNext(), 7000);
-    };
+    // let autoSliderInterval = setInterval(() => sliderNext(), 7000);
+    // const autoSlide = () => {
+    //   autoSliderInterval = setInterval(() => sliderNext(), 7000);
+    // };
     // addEventListener([heroSliderNextBtn, heroSliderPrevBtn], "mouseover", () => {
     //   clearInterval(autoSliderInterval);
     // });
