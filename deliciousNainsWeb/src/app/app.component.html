@@ -1,5 +1,5 @@
 <!-- | 載入中 PRELOAD | -->
-<div class="preload" data-preaload>
+<div class="preload" #preaload>
   <div class="circle"></div>
   <p class="text">Nains</p>
 </div>
@@ -47,15 +47,15 @@
 </div>
 
 <!-- | HEADER | -->
-<header class="header" data-header>
+<header class="header" #header>
   <div class="container">
     <a href="#" class="logo">
       <img src="./img/logo.svg" width="160" height="50" alt="Nains Home">
     </a>
 
-    <nav class="navbar" data-navbar>
+    <nav class="navbar" #navbar>
 
-      <button class="close-btn" aria-label="close menu" data-nav-toggler onclick="toggleNavbar()">
+      <button class="close-btn" aria-label="close menu" (click)='toggleNavbar()'>
         <!-- <ion-icon name="close-outline" aria-hidden="true"></ion-icon> -->
       </button>
 
@@ -129,13 +129,13 @@
       <span class="text text-2" aria-hidden="true">Find A Table</span>
     </a>
 
-    <button class="nav-open-btn" aria-label="open menu" data-nav-toggler onclick="toggleNavbar()">
+    <button class="nav-open-btn" aria-label="open menu" (click)='toggleNavbar()'>
       <span class="line line-1"></span>
       <span class="line line-2"></span>
       <span class="line line-3"></span>
     </button>
 
-    <div class="overlay" data-nav-toggler data-overlay onclick="toggleNavbar()"></div>
+    <div class="overlay" #overlay (click)='toggleNavbar()'></div>
   </div>
 </header>
 
@@ -144,9 +144,9 @@
 
     <!-- | MAIN | -->
     <section class="hero text-center" aria-label="home" id="home">
-      <ul class="hero-slider" data-hero-slider>
+      <ul class="hero-slider" #heroSlider>
 
-        <li class="slider-item active" data-hero-slider-item>
+        <li class="slider-item active">
           <div class="slider-bg">
             <img src="./img/hero-slider-1.jpg" width="1880" height="950" class="img-cover">
           </div>
@@ -163,7 +163,7 @@
           </a>
         </li>
 
-        <li class="slider-item" data-hero-slider-item>
+        <li class="slider-item">
           <div class="slider-bg">
             <img src="./img/hero-slider-2.jpg" width="1880" height="950" class="img-cover">
           </div>
@@ -180,7 +180,7 @@
           </a>
         </li>
 
-        <li class="slider-item" data-hero-slider-item>
+        <li class="slider-item">
           <div class="slider-bg">
             <img src="./img/hero-slider-3.jpg" width="1880" height="950" class="img-cover">
           </div>
@@ -199,11 +199,11 @@
 
       </ul>
 
-      <button class="slider-btn prev" aria-label="slide to previous" data-prev-btn>
+      <button class="slider-btn prev" aria-label="slide to previous" (click)='sliderMove(-1)'>
         <!-- <ion-icon name="chevron-back"></ion-icon> -->
       </button>
 
-      <button class="slider-btn next" aria-label="slide to next" data-next-btn>
+      <button class="slider-btn next" aria-label="slide to next" (click)='sliderMove(1)'>
         <!-- <ion-icon name="chevren-forward"></ion-icon> -->
       </button>
 
@@ -311,11 +311,11 @@
           </a>
         </div>
 
-        <figure class="about-banner">
+        <figure class="about-banner" #parallaxItem>
           <img src="./img/about-banner.jpg" width="570" height="570" loading="lazy" alt="about banner" class="w-100"
-            data-parallax-item data-parallax-speed="2">
+            data-parallax-speed="2">
 
-          <div class="abs-img abs-img-1 has-before" data-parallax-item data-parallax-speed="4.75">
+          <div class="abs-img abs-img-1 has-before" data-parallax-speed="4.75">
             <img src="./img/about-abs-image.jpg" width="285" height="285" loading="lazy" alt="" class="w-100">
           </div>
 
