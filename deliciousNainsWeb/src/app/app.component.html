@@ -9,7 +9,7 @@
   <div class="container">
     <address class="topbar-item">
       <div class="icon">
-        <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+        <ion-icon name="location-outline"></ion-icon>
       </div>
 
       <span class="span">Restaurant St, Delicious City, London 9578, UK</span>
@@ -19,7 +19,7 @@
 
     <div class="topbar-item item2">
       <div class="icon">
-        <ion-icon class="time-outline" aria-hidden="true"></ion-icon>
+        <ion-icon class="time-outline"></ion-icon>
       </div>
 
       <span class="span">Daily : 8.00 am to 10.00 pm</span>
@@ -27,7 +27,7 @@
 
     <a href="tel:0423274888" class="topbar-item">
       <div class="icon">
-        <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+        <ion-icon name="call-outline"></ion-icon>
       </div>
 
       <span class="span">+886 04 232 74888</span>
@@ -37,7 +37,7 @@
 
     <a href="mailto:jason20226@gmail.com" class="topbar-item">
       <div class="icon">
-        <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+        <ion-icon name="mail-outline"></ion-icon>
       </div>
 
       <span class="span">jason20226@gmail.com</span>
@@ -55,8 +55,8 @@
 
     <nav class="navbar" #navbar>
 
-      <button class="close-btn" aria-label="close menu" (click)='toggleNavbar()'>
-        <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+      <button class="close-btn" (click)='toggleNavbar()'>
+        <ion-icon name="close-outline"></ion-icon>
       </button>
 
       <a href="#" class="logo">
@@ -126,10 +126,10 @@
 
     <a href="#" class="btn btn-secondary">
       <span class="text text-1">Find A Table</span>
-      <span class="text text-2" aria-hidden="true">Find A Table</span>
+      <span class="text text-2">Find A Table</span>
     </a>
 
-    <button class="nav-open-btn" aria-label="open menu" (click)='toggleNavbar()'>
+    <button class="nav-open-btn" (click)='toggleNavbar()'>
       <span class="line line-1"></span>
       <span class="line line-2"></span>
       <span class="line line-3"></span>
@@ -143,7 +143,7 @@
   <article>
 
     <!-- | MAIN | -->
-    <section class="hero text-center" aria-label="home" id="home">
+    <section class="hero text-center" id="home">
       <ul class="hero-slider" #heroSlider>
 
         <li class="slider-item active">
@@ -159,7 +159,7 @@
           </p>
           <a href="#" class="btn btn-primary slider-reveal">
             <span class="text text-1">View Our Menu</span>
-            <span class="text text-2" aria-hidden="true">View Our Menu</span>
+            <span class="text text-2">View Our Menu</span>
           </a>
         </li>
 
@@ -176,7 +176,7 @@
           </p>
           <a href="#" class="btn btn-primary slider-reveal">
             <span class="text text-1">View Our Menu</span>
-            <span class="text text-2" aria-hidden="true">View Our Menu</span>
+            <span class="text text-2">View Our Menu</span>
           </a>
         </li>
 
@@ -193,17 +193,17 @@
           </p>
           <a href="#" class="btn btn-primary slider-reveal">
             <span class="text text-1">View Our Menu</span>
-            <span class="text text-2" aria-hidden="true">View Our Menu</span>
+            <span class="text text-2">View Our Menu</span>
           </a>
         </li>
 
       </ul>
 
-      <button class="slider-btn prev" aria-label="slide to previous" (click)='sliderMove(-1)'>
+      <button class="slider-btn prev" (click)='sliderMove(-1)'>
         <ion-icon name="chevron-back"></ion-icon>
       </button>
 
-      <button class="slider-btn next" aria-label="slide to next" (click)='sliderMove(1)'>
+      <button class="slider-btn next" (click)='sliderMove(1)'>
         <ion-icon name="chevren-forward"></ion-icon>
       </button>
 
@@ -216,7 +216,7 @@
     </section>
 
     <!-- | SERVICE | -->
-    <section class="section service bg-black-10 text-center" aria-label="service">
+    <section class="section service bg-black-10 text-center">
       <div class="container">
         <p class="section-subtitle label-2">Flavors For Royalty</p>
         <h2 class="headline-1 section-title">We Offer Top Notch</h2>
@@ -293,7 +293,7 @@
     </section>
 
     <!-- | ABOUT | -->
-    <section class="section about text-center" aria-labelledby="about-label" id="about">
+    <section class="section about text-center" id="about">
       <div class="container">
 
         <div class="about-content">
@@ -307,7 +307,7 @@
           <a href="tel:+8860423274888" class="body-1 contact-number hover-underline">+886 04 2327 4888</a>
           <a href="#" class="btn btn-primary">
             <span class="text text-1">Read More</span>
-            <span class="text text-2" aria-hidden="true">Read More</span>
+            <span class="text text-2">Read More</span>
           </a>
         </div>
 
@@ -330,7 +330,7 @@
     </section>
 
     <!-- | SPECIAL DISH | -->
-    <section class="special-dish text-center" aria-labelledby="dish-label">
+    <section class="special-dish text-center">
 
       <div class="special-dish-banner">
         <img src="./img/special-dish-banner.jpg" width="940" height="900" loading="lazy" alt="special dish"
@@ -359,7 +359,7 @@
 
           <a href="#" class="btn btn-primary">
             <span class="text text-1">View All Menu</span>
-            <span class="text text-2" aria-hidden="true">View All Menu</span>
+            <span class="text text-2">View All Menu</span>
           </a>
         </div>
       </div>
@@ -371,7 +371,7 @@
     </section>
 
     <!-- | MENU | -->
-    <section class="section menu" aria-label="menu-label" id="menu">
+    <section class="section menu" id="menu">
       <div class="container">
 
         <p class="section-subtitle text-center label-2">Special Selection</p>
@@ -512,7 +512,7 @@
 
         <a href="#" class="btn btn-primary">
           <span class="text text-1">View Menu</span>
-          <span class="text text-2" aria-hidden="true">View All Menu</span>
+          <span class="text text-2">View All Menu</span>
         </a>
 
         <img src="./img/shape-5.png" width="921" height="1036" loading="lazy" alt="shape"
@@ -524,8 +524,7 @@
     </section>
 
     <!-- | TESTIMONIALS | -->
-    <section class="sectyion testi text-center has-bg-image" style="background-image: url('./img/testimonial-bg.jpg');"
-      aria-label="testimonials">
+    <section class="sectyion testi text-center has-bg-image" style="background-image: url('./img/testimonial-bg.jpg');">
       <div class="container">
         <div class="quote">"</div>
         <p class="headline-2 testi-text">
@@ -570,7 +569,7 @@
 
               <div class="icon-wrapper">
 
-                <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+                <ion-icon name="person-outline"></ion-icon>
 
                 <select name="person" id="" class="input-field">
                   <option value="1-person">1 Person</option>
@@ -582,23 +581,23 @@
                   <option value="7-person">7 Person</option>
                 </select>
 
-                <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                <ion-icon name="chevron-down"></ion-icon>
 
               </div>
 
               <div class="icon-wrapper">
 
-                <ion-icon name="calendar-clear-outline" aria-hidden="true"></ion-icon>
+                <ion-icon name="calendar-clear-outline"></ion-icon>
 
                 <input type="date" name="reservation-date" class="input-field">
 
-                <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                <ion-icon name="chevron-down"></ion-icon>
 
               </div>
 
               <div class="icon-wrapper">
 
-                <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                <ion-icon name="time-outline"></ion-icon>
 
                 <select name="person" id="" class="input-field">
                   <option value="08:00am">08 : 00 am</option>
@@ -618,7 +617,7 @@
                   <option value="10:00pm">10 : 00 pm</option>
                 </select>
 
-                <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                <ion-icon name="chevron-down"></ion-icon>
 
               </div>
 
@@ -628,7 +627,7 @@
 
             <button type="submit" class="btn btn-secondary">
               <span class="text text-1">Book A Table</span>
-              <span class="text text-2" aria-hidden="true">Book A Table</span>
+              <span class="text text-2">Book A Table</span>
             </button>
 
           </form>
@@ -660,7 +659,7 @@
     </section>
 
     <!-- | FEATURES | -->
-    <section class="section features text-center" aria-label="features">
+    <section class="section features text-center">
       <div class="container">
         <p class="section-subtitle label-2">Why Choose Us</p>
 
@@ -733,7 +732,7 @@
     </section>
 
     <!-- | EVENT | -->
-    <section class="section event bg-black-10" aria-label="event">
+    <section class="section event bg-black-10">
       <div class="container">
 
         <p class="section-subtitle label-2 text-center">Recent Updates</p>
@@ -802,7 +801,7 @@
 
         <a href="" class="btn btn-primary">
           <span class="text text-1">View Our Blog</span>
-          <span class="text text-2" aria-hidden="true">View Our Blog</span>
+          <span class="text text-2">View Our Blog</span>
         </a>
 
       </div>
@@ -847,14 +846,14 @@
 
         <form action="" class="input-wrapper">
           <div class="icon-wrapper">
-            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+            <ion-icon name="mail-outline"></ion-icon>
 
             <input type="email" name="email_address" placeholder="jason20226@gmail.com" class="input-field">
           </div>
 
           <button type="submit" class="btn btn-secondary">
             <span class="text text-1">Subscribe</span>
-            <span class="text text-2" aria-hidden="true">Subscribe</span>
+            <span class="text text-2">Subscribe</span>
           </button>
         </form>
 
