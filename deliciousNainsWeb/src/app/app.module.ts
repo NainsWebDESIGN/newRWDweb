@@ -13,8 +13,6 @@ import { AppComponent } from './app.component';
 // import { xxx } from '@pipeModule';
 // import { xxx } from '@comModule';
 
-
-
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
