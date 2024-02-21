@@ -51,7 +51,8 @@
   "defaults": {
     "styleExt": "scss",
     "component": {
-      "spec": false
+      "spec": false,
+      "inlineStyle": false
     },
     "service": {
       "spec": false
