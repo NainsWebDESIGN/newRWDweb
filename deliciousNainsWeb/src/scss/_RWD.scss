@@ -1,0 +1,70 @@
+// | RWD |
+
+// ? 575px screen ?
+@include Pad {
+  // ! REUSED !
+  @include fontSizeBody2(2rem);
+
+  :is(.service, .about) .section-text {
+    max-width: 420px;
+    margin-inline: auto;
+  }
+
+  .contact-number {
+    @include fontSizeBody1(3rem);
+  }
+
+  // ! TOPBAR !
+  .topbar {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-block: 10px;
+    border-block-end: 1px solid $white-alpha-20;
+    z-index: 4;
+    transition: $transition-1;
+
+    &:has(~ .header.active) {
+      transform: translateY(-100%);
+    }
+
+    .container {
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .link {
+      transition: $transition-1;
+
+      &:is(:hover, :focus-visible) {
+        color: $gold-crayola;
+      }
+    }
+  }
+
+  .topbar-item {
+    gap: 6px;
+
+    ion-icon {
+      --ionicon-stroke-width: 60px;
+    }
+
+    .span {
+      font-size: $fontSize-label-1;
+    }
+  }
+
+  .topbar-item:not(.link),
+  .topbar .separator {
+    display: none;
+  }
+
+  .topbar-item,
+  .topbar,
+  .container {
+    display: flex;
+    align-items: center;
+  }
+}

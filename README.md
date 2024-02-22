@@ -40,4 +40,6 @@ schemas: [CUSTOM_ELEMENTS_SCHEMA];
 綠色
 ```
 
-- [示範網站](https://youtu.be/CjVGp5kGHxA?t=12524)
+- [示範網站](https://youtu.be/CjVGp5kGHxA?t=13410)
+
+- 最新進度，目前 topbar RWD 有問題

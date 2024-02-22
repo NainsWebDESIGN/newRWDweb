@@ -61,3 +61,22 @@ $radius-circle: 50%;
 $transition-1: 250ms ease;
 $transition-2: 500ms ease;
 $transition-3: 1000ms ease;
+
+@mixin fontSizeBody1($value) {
+  $fontSize-body-1: #{$value};
+}
+
+@mixin fontSizeBody2($value) {
+  $fontSize-body-2: #{$value};
+}
+
+@mixin Pad {
+  @media (min-width: 575px) {
+    @content;
+  }
+}
+@mixin Computer {
+  @media (min-width: 576px) {
+    @content;
+  }
+}
