@@ -11,7 +11,13 @@ export class AppComponent implements OnInit {
     this.preaload.nativeElement.classList.add("loaded");
     document.body.classList.add("loaded");
   }
+
+  @HostListener('window:scroll', ['$event'])
+  toTopScroll() {
+    this.toTop.nativeElement.classList[window.scrollY >= 50 ? "add" : "remove"]("active");
+  }
   @ViewChild("preaload") preaload: ElementRef;
+  @ViewChild("toTop") toTop: ElementRef;
   constructor() { }
   ngOnInit() {
   }
